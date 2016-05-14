@@ -1,0 +1,13 @@
+<script src="/js/wiki.js"></script>
+
+<h1>Please Select a Wiki</h1>
+
+{{range $_, $value := .}}
+<p><a href="/view/{{ $value }}">{{$value}}</a></p>
+{{end}}
+
+<form onsubmit="return newWiki(this)">
+	<input type="text" name="title" />
+	<input type="submit" value="New Wiki" />
+</form>
+
